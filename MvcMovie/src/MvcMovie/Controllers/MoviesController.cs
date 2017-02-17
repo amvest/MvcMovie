@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using MvcMovie.Data;
 using MvcMovie.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace MvcMovie.Controllers
 {
@@ -67,6 +68,7 @@ namespace MvcMovie.Controllers
 		}
 
 		// GET: Movies/Create
+		[Authorize]
 		public IActionResult Create()
 		{
 			return View();
@@ -89,6 +91,7 @@ namespace MvcMovie.Controllers
 		}
 
 		// GET: Movies/Edit/5
+		[Authorize]
 		public async Task<IActionResult> Edit(int? id)
 		{
 			if (id == null)
@@ -140,6 +143,7 @@ namespace MvcMovie.Controllers
 		}
 
 		// GET: Movies/Delete/5
+		[Authorize]
 		public async Task<IActionResult> Delete(int? id)
 		{
 			if (id == null)
