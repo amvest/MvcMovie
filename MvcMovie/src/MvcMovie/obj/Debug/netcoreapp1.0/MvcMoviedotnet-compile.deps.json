@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v1.0/",
-    "signature": "7646bef5a16e40fb35dbcd6285bfc3d764e4b05c"
+    "signature": "5d16b132f3a3dd759455f117a178d1898fce7b76"
   },
   "compilationOptions": {
     "defines": [
@@ -35,7 +35,8 @@
           "Microsoft.Extensions.Logging.Debug": "1.0.0",
           "Microsoft.Extensions.Options.ConfigurationExtensions": "1.0.0",
           "Microsoft.VisualStudio.Web.BrowserLink.Loader": "14.0.0",
-          "Microsoft.AspNetCore.Authentication.Facebook": "1.1.0"
+          "Microsoft.AspNetCore.Authentication.Facebook": "1.1.0",
+          "Microsoft.AspNetCore.Authentication.Google": "1.1.0"
         },
         "compile": {
           "MvcMovie.dll": {}
@@ -88,6 +89,15 @@
         },
         "compile": {
           "lib/netstandard1.3/Microsoft.AspNetCore.Authentication.Facebook.dll": {}
+        }
+      },
+      "Microsoft.AspNetCore.Authentication.Google/1.1.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Authentication.OAuth": "1.1.0",
+          "NETStandard.Library": "1.6.1"
+        },
+        "compile": {
+          "lib/netstandard1.3/Microsoft.AspNetCore.Authentication.Google.dll": {}
         }
       },
       "Microsoft.AspNetCore.Authentication.OAuth/1.1.0": {
@@ -2850,7 +2860,8 @@
           "Microsoft.Extensions.Logging.Debug": "1.0.0",
           "Microsoft.Extensions.Options.ConfigurationExtensions": "1.0.0",
           "Microsoft.VisualStudio.Web.BrowserLink.Loader": "14.0.0",
-          "Microsoft.AspNetCore.Authentication.Facebook": "1.1.0"
+          "Microsoft.AspNetCore.Authentication.Facebook": "1.1.0",
+          "Microsoft.AspNetCore.Authentication.Google": "1.1.0"
         },
         "runtime": {
           "MvcMovie.dll": {}
@@ -2903,6 +2914,15 @@
         },
         "runtime": {
           "lib/netstandard1.3/Microsoft.AspNetCore.Authentication.Facebook.dll": {}
+        }
+      },
+      "Microsoft.AspNetCore.Authentication.Google/1.1.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Authentication.OAuth": "1.1.0",
+          "NETStandard.Library": "1.6.1"
+        },
+        "runtime": {
+          "lib/netstandard1.3/Microsoft.AspNetCore.Authentication.Google.dll": {}
         }
       },
       "Microsoft.AspNetCore.Authentication.OAuth/1.1.0": {
@@ -5584,6 +5604,11 @@
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-Zz4xPNBnXPe4BUKgbNWOz+MsYkBZaqSq3ObMWuoyLU1so0Mw7WsknXsplFrXvik4KljtgtlP+KjM6tX0hPHB2g=="
+    },
+    "Microsoft.AspNetCore.Authentication.Google/1.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-rJX/pZzyaBivd2w56Ud35eV91UaFAQOoCE1fNLFhLiYTr8H5n3S6NC9gSEzTybuHIV+TLs+UXPJjc/L5GiUB+A=="
     },
     "Microsoft.AspNetCore.Authentication.OAuth/1.1.0": {
       "type": "package",

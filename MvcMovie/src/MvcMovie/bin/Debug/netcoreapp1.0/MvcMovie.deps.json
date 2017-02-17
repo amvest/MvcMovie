@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v1.0",
-    "signature": "b2defc670c9ae873cf385f1cc4a100b91050e152"
+    "signature": "cf5828b1e5ab9919109c54f57effbab7be66d424"
   },
   "compilationOptions": {
     "defines": [
@@ -35,7 +35,8 @@
           "Microsoft.Extensions.Logging.Debug": "1.0.0",
           "Microsoft.Extensions.Options.ConfigurationExtensions": "1.0.0",
           "Microsoft.VisualStudio.Web.BrowserLink.Loader": "14.0.0",
-          "Microsoft.AspNetCore.Authentication.Facebook": "1.1.0"
+          "Microsoft.AspNetCore.Authentication.Facebook": "1.1.0",
+          "Microsoft.AspNetCore.Authentication.Google": "1.1.0"
         },
         "runtime": {
           "MvcMovie.dll": {}
@@ -98,6 +99,18 @@
         },
         "compile": {
           "lib/netstandard1.3/Microsoft.AspNetCore.Authentication.Facebook.dll": {}
+        }
+      },
+      "Microsoft.AspNetCore.Authentication.Google/1.1.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Authentication.OAuth": "1.1.0",
+          "NETStandard.Library": "1.6.1"
+        },
+        "runtime": {
+          "lib/netstandard1.3/Microsoft.AspNetCore.Authentication.Google.dll": {}
+        },
+        "compile": {
+          "lib/netstandard1.3/Microsoft.AspNetCore.Authentication.Google.dll": {}
         }
       },
       "Microsoft.AspNetCore.Authentication.OAuth/1.1.0": {
@@ -3982,6 +3995,11 @@
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-Zz4xPNBnXPe4BUKgbNWOz+MsYkBZaqSq3ObMWuoyLU1so0Mw7WsknXsplFrXvik4KljtgtlP+KjM6tX0hPHB2g=="
+    },
+    "Microsoft.AspNetCore.Authentication.Google/1.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-rJX/pZzyaBivd2w56Ud35eV91UaFAQOoCE1fNLFhLiYTr8H5n3S6NC9gSEzTybuHIV+TLs+UXPJjc/L5GiUB+A=="
     },
     "Microsoft.AspNetCore.Authentication.OAuth/1.1.0": {
       "type": "package",
