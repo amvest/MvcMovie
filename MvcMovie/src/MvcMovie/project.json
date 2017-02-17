@@ -6,6 +6,7 @@
 			"version": "1.0.1",
 			"type": "platform"
 		},
+		"Microsoft.Extensions.Configuration.UserSecrets": "1.0.0",
 		"Microsoft.AspNetCore.Authentication.Cookies": "1.0.0",
 		"Microsoft.AspNetCore.Diagnostics": "1.0.0",
 		"Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": "1.0.0",
@@ -40,10 +41,11 @@
 			"version": "1.0.0-preview2-final",
 			"type": "build"
 		},
-		"Microsoft.VisualStudio.Web.CodeGenerators.Mvc": {
-			"version": "1.0.0-preview2-final",
-			"type": "build"
-		}
+			"Microsoft.VisualStudio.Web.CodeGenerators.Mvc": {
+				"version": "1.0.0-preview2-final",
+				"type": "build"
+			},
+			"Microsoft.AspNetCore.Authentication.Facebook": "1.1.0"
 	},
 
 	"tools": {
