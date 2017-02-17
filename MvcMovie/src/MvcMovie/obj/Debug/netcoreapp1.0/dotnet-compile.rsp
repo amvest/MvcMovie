@@ -1,5 +1,5 @@
---temp-output:C:\Users\user1\Documents\Visual Studio 2015\Projects\ASPTutorials\MvcMovie\src\MvcMovie\obj\Debug\netcoreapp1.0\
---out:C:\Users\user1\Documents\Visual Studio 2015\Projects\ASPTutorials\MvcMovie\src\MvcMovie\bin\Debug\netcoreapp1.0\MvcMovie.dll
+--temp-output:C:\Users\user1\Documents\GitHub\MvcMovie\MvcMovie\src\MvcMovie\obj\Debug\netcoreapp1.0\
+--out:C:\Users\user1\Documents\GitHub\MvcMovie\MvcMovie\src\MvcMovie\bin\Debug\netcoreapp1.0\MvcMovie.dll
 --define:DEBUG
 --define:TRACE
 --define:NETCOREAPP1_0
@@ -223,39 +223,39 @@
 --reference:C:\Users\user1\.nuget\packages\System.Threading.Timer\4.0.1\ref\netstandard1.2\System.Threading.Timer.dll
 --reference:C:\Users\user1\.nuget\packages\System.Xml.ReaderWriter\4.0.11\ref\netstandard1.3\System.Xml.ReaderWriter.dll
 --reference:C:\Users\user1\.nuget\packages\System.Xml.XDocument\4.0.11\ref\netstandard1.3\System.Xml.XDocument.dll
---resource:"C:\Users\user1\Documents\Visual Studio 2015\Projects\ASPTutorials\MvcMovie\src\MvcMovie\obj\Debug\netcoreapp1.0\MvcMoviedotnet-compile.deps.json",MvcMovie.deps.json
-C:\Users\user1\Documents\Visual Studio 2015\Projects\ASPTutorials\MvcMovie\src\MvcMovie\Program.cs
-C:\Users\user1\Documents\Visual Studio 2015\Projects\ASPTutorials\MvcMovie\src\MvcMovie\Startup.cs
-C:\Users\user1\Documents\Visual Studio 2015\Projects\ASPTutorials\MvcMovie\src\MvcMovie\Controllers\AccountController.cs
-C:\Users\user1\Documents\Visual Studio 2015\Projects\ASPTutorials\MvcMovie\src\MvcMovie\Controllers\HomeController.cs
-C:\Users\user1\Documents\Visual Studio 2015\Projects\ASPTutorials\MvcMovie\src\MvcMovie\Controllers\ManageController.cs
-C:\Users\user1\Documents\Visual Studio 2015\Projects\ASPTutorials\MvcMovie\src\MvcMovie\Controllers\MoviesController.cs
-C:\Users\user1\Documents\Visual Studio 2015\Projects\ASPTutorials\MvcMovie\src\MvcMovie\Data\ApplicationDbContext.cs
-C:\Users\user1\Documents\Visual Studio 2015\Projects\ASPTutorials\MvcMovie\src\MvcMovie\Data\Migrations\00000000000000_CreateIdentitySchema.cs
-C:\Users\user1\Documents\Visual Studio 2015\Projects\ASPTutorials\MvcMovie\src\MvcMovie\Data\Migrations\00000000000000_CreateIdentitySchema.Designer.cs
-C:\Users\user1\Documents\Visual Studio 2015\Projects\ASPTutorials\MvcMovie\src\MvcMovie\Data\Migrations\20170216234027_Initial.cs
-C:\Users\user1\Documents\Visual Studio 2015\Projects\ASPTutorials\MvcMovie\src\MvcMovie\Data\Migrations\20170216234027_Initial.Designer.cs
-C:\Users\user1\Documents\Visual Studio 2015\Projects\ASPTutorials\MvcMovie\src\MvcMovie\Data\Migrations\ApplicationDbContextModelSnapshot.cs
-C:\Users\user1\Documents\Visual Studio 2015\Projects\ASPTutorials\MvcMovie\src\MvcMovie\Models\ApplicationUser.cs
-C:\Users\user1\Documents\Visual Studio 2015\Projects\ASPTutorials\MvcMovie\src\MvcMovie\Models\Movie.cs
-C:\Users\user1\Documents\Visual Studio 2015\Projects\ASPTutorials\MvcMovie\src\MvcMovie\Models\MovieGenreViewModel.cs
-C:\Users\user1\Documents\Visual Studio 2015\Projects\ASPTutorials\MvcMovie\src\MvcMovie\Models\SeedData.cs
-C:\Users\user1\Documents\Visual Studio 2015\Projects\ASPTutorials\MvcMovie\src\MvcMovie\Models\AccountViewModels\ExternalLoginConfirmationViewModel.cs
-C:\Users\user1\Documents\Visual Studio 2015\Projects\ASPTutorials\MvcMovie\src\MvcMovie\Models\AccountViewModels\ForgotPasswordViewModel.cs
-C:\Users\user1\Documents\Visual Studio 2015\Projects\ASPTutorials\MvcMovie\src\MvcMovie\Models\AccountViewModels\LoginViewModel.cs
-C:\Users\user1\Documents\Visual Studio 2015\Projects\ASPTutorials\MvcMovie\src\MvcMovie\Models\AccountViewModels\RegisterViewModel.cs
-C:\Users\user1\Documents\Visual Studio 2015\Projects\ASPTutorials\MvcMovie\src\MvcMovie\Models\AccountViewModels\ResetPasswordViewModel.cs
-C:\Users\user1\Documents\Visual Studio 2015\Projects\ASPTutorials\MvcMovie\src\MvcMovie\Models\AccountViewModels\SendCodeViewModel.cs
-C:\Users\user1\Documents\Visual Studio 2015\Projects\ASPTutorials\MvcMovie\src\MvcMovie\Models\AccountViewModels\VerifyCodeViewModel.cs
-C:\Users\user1\Documents\Visual Studio 2015\Projects\ASPTutorials\MvcMovie\src\MvcMovie\Models\ManageViewModels\AddPhoneNumberViewModel.cs
-C:\Users\user1\Documents\Visual Studio 2015\Projects\ASPTutorials\MvcMovie\src\MvcMovie\Models\ManageViewModels\ChangePasswordViewModel.cs
-C:\Users\user1\Documents\Visual Studio 2015\Projects\ASPTutorials\MvcMovie\src\MvcMovie\Models\ManageViewModels\ConfigureTwoFactorViewModel.cs
-C:\Users\user1\Documents\Visual Studio 2015\Projects\ASPTutorials\MvcMovie\src\MvcMovie\Models\ManageViewModels\FactorViewModel.cs
-C:\Users\user1\Documents\Visual Studio 2015\Projects\ASPTutorials\MvcMovie\src\MvcMovie\Models\ManageViewModels\IndexViewModel.cs
-C:\Users\user1\Documents\Visual Studio 2015\Projects\ASPTutorials\MvcMovie\src\MvcMovie\Models\ManageViewModels\ManageLoginsViewModel.cs
-C:\Users\user1\Documents\Visual Studio 2015\Projects\ASPTutorials\MvcMovie\src\MvcMovie\Models\ManageViewModels\RemoveLoginViewModel.cs
-C:\Users\user1\Documents\Visual Studio 2015\Projects\ASPTutorials\MvcMovie\src\MvcMovie\Models\ManageViewModels\SetPasswordViewModel.cs
-C:\Users\user1\Documents\Visual Studio 2015\Projects\ASPTutorials\MvcMovie\src\MvcMovie\Models\ManageViewModels\VerifyPhoneNumberViewModel.cs
-C:\Users\user1\Documents\Visual Studio 2015\Projects\ASPTutorials\MvcMovie\src\MvcMovie\Services\IEmailSender.cs
-C:\Users\user1\Documents\Visual Studio 2015\Projects\ASPTutorials\MvcMovie\src\MvcMovie\Services\ISmsSender.cs
-C:\Users\user1\Documents\Visual Studio 2015\Projects\ASPTutorials\MvcMovie\src\MvcMovie\Services\MessageServices.cs
+--resource:"C:\Users\user1\Documents\GitHub\MvcMovie\MvcMovie\src\MvcMovie\obj\Debug\netcoreapp1.0\MvcMoviedotnet-compile.deps.json",MvcMovie.deps.json
+C:\Users\user1\Documents\GitHub\MvcMovie\MvcMovie\src\MvcMovie\Program.cs
+C:\Users\user1\Documents\GitHub\MvcMovie\MvcMovie\src\MvcMovie\Startup.cs
+C:\Users\user1\Documents\GitHub\MvcMovie\MvcMovie\src\MvcMovie\Controllers\AccountController.cs
+C:\Users\user1\Documents\GitHub\MvcMovie\MvcMovie\src\MvcMovie\Controllers\HomeController.cs
+C:\Users\user1\Documents\GitHub\MvcMovie\MvcMovie\src\MvcMovie\Controllers\ManageController.cs
+C:\Users\user1\Documents\GitHub\MvcMovie\MvcMovie\src\MvcMovie\Controllers\MoviesController.cs
+C:\Users\user1\Documents\GitHub\MvcMovie\MvcMovie\src\MvcMovie\Data\ApplicationDbContext.cs
+C:\Users\user1\Documents\GitHub\MvcMovie\MvcMovie\src\MvcMovie\Data\Migrations\00000000000000_CreateIdentitySchema.cs
+C:\Users\user1\Documents\GitHub\MvcMovie\MvcMovie\src\MvcMovie\Data\Migrations\00000000000000_CreateIdentitySchema.Designer.cs
+C:\Users\user1\Documents\GitHub\MvcMovie\MvcMovie\src\MvcMovie\Data\Migrations\20170216234027_Initial.cs
+C:\Users\user1\Documents\GitHub\MvcMovie\MvcMovie\src\MvcMovie\Data\Migrations\20170216234027_Initial.Designer.cs
+C:\Users\user1\Documents\GitHub\MvcMovie\MvcMovie\src\MvcMovie\Data\Migrations\ApplicationDbContextModelSnapshot.cs
+C:\Users\user1\Documents\GitHub\MvcMovie\MvcMovie\src\MvcMovie\Models\ApplicationUser.cs
+C:\Users\user1\Documents\GitHub\MvcMovie\MvcMovie\src\MvcMovie\Models\Movie.cs
+C:\Users\user1\Documents\GitHub\MvcMovie\MvcMovie\src\MvcMovie\Models\MovieGenreViewModel.cs
+C:\Users\user1\Documents\GitHub\MvcMovie\MvcMovie\src\MvcMovie\Models\SeedData.cs
+C:\Users\user1\Documents\GitHub\MvcMovie\MvcMovie\src\MvcMovie\Models\AccountViewModels\ExternalLoginConfirmationViewModel.cs
+C:\Users\user1\Documents\GitHub\MvcMovie\MvcMovie\src\MvcMovie\Models\AccountViewModels\ForgotPasswordViewModel.cs
+C:\Users\user1\Documents\GitHub\MvcMovie\MvcMovie\src\MvcMovie\Models\AccountViewModels\LoginViewModel.cs
+C:\Users\user1\Documents\GitHub\MvcMovie\MvcMovie\src\MvcMovie\Models\AccountViewModels\RegisterViewModel.cs
+C:\Users\user1\Documents\GitHub\MvcMovie\MvcMovie\src\MvcMovie\Models\AccountViewModels\ResetPasswordViewModel.cs
+C:\Users\user1\Documents\GitHub\MvcMovie\MvcMovie\src\MvcMovie\Models\AccountViewModels\SendCodeViewModel.cs
+C:\Users\user1\Documents\GitHub\MvcMovie\MvcMovie\src\MvcMovie\Models\AccountViewModels\VerifyCodeViewModel.cs
+C:\Users\user1\Documents\GitHub\MvcMovie\MvcMovie\src\MvcMovie\Models\ManageViewModels\AddPhoneNumberViewModel.cs
+C:\Users\user1\Documents\GitHub\MvcMovie\MvcMovie\src\MvcMovie\Models\ManageViewModels\ChangePasswordViewModel.cs
+C:\Users\user1\Documents\GitHub\MvcMovie\MvcMovie\src\MvcMovie\Models\ManageViewModels\ConfigureTwoFactorViewModel.cs
+C:\Users\user1\Documents\GitHub\MvcMovie\MvcMovie\src\MvcMovie\Models\ManageViewModels\FactorViewModel.cs
+C:\Users\user1\Documents\GitHub\MvcMovie\MvcMovie\src\MvcMovie\Models\ManageViewModels\IndexViewModel.cs
+C:\Users\user1\Documents\GitHub\MvcMovie\MvcMovie\src\MvcMovie\Models\ManageViewModels\ManageLoginsViewModel.cs
+C:\Users\user1\Documents\GitHub\MvcMovie\MvcMovie\src\MvcMovie\Models\ManageViewModels\RemoveLoginViewModel.cs
+C:\Users\user1\Documents\GitHub\MvcMovie\MvcMovie\src\MvcMovie\Models\ManageViewModels\SetPasswordViewModel.cs
+C:\Users\user1\Documents\GitHub\MvcMovie\MvcMovie\src\MvcMovie\Models\ManageViewModels\VerifyPhoneNumberViewModel.cs
+C:\Users\user1\Documents\GitHub\MvcMovie\MvcMovie\src\MvcMovie\Services\IEmailSender.cs
+C:\Users\user1\Documents\GitHub\MvcMovie\MvcMovie\src\MvcMovie\Services\ISmsSender.cs
+C:\Users\user1\Documents\GitHub\MvcMovie\MvcMovie\src\MvcMovie\Services\MessageServices.cs
