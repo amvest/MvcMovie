@@ -106,10 +106,18 @@ namespace MvcMovie
 			app.UseIdentity();
 
 			// Add external authentication middleware below. To configure them please see http://go.microsoft.com/fwlink/?LinkID=532715
+			//Facebook
 			app.UseFacebookAuthentication(new FacebookOptions()
 			{
 				AppId = Configuration["Authentication:Facebook:AppId"],
 				AppSecret = Configuration["Authentication:Facebook:AppSecret"]
+			});
+
+			//Google
+			app.UseGoogleAuthentication(new GoogleOptions()
+			{
+				ClientId = Configuration["Authentication:Google:ClientId"],
+				ClientSecret = Configuration["Authentication:Google:ClientSecret"]
 			});
 
 			app.UseMvc(routes =>
