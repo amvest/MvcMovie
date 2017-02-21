@@ -77,6 +77,13 @@ namespace MvcMovie
 				options.Filters.Add(new RequireHttpsAttribute());
 			});
 
+			services.AddAuthorization(options =>
+			{
+				options.AddPolicy(
+					"AdminOnly",
+					policyBuilder => policyBuilder.RequireClaim("Name"));
+			});
+
 			// Add application services.
 			services.AddTransient<IEmailSender, AuthMessageSender>();
 			services.AddTransient<ISmsSender, AuthMessageSender>();
