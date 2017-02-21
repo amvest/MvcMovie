@@ -68,7 +68,7 @@ namespace MvcMovie.Controllers
 		}
 
 		// GET: Movies/Create
-		[Authorize]
+		[Authorize(Policy = "AdminOnly")]
 		public IActionResult Create()
 		{
 			return View();

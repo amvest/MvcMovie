@@ -1,7 +1,21 @@
 @model MovieGenreViewModel
+@using System.Security.Claims;
 
 @{
 	ViewData["Title"] = "Index";
+}
+
+@if (!User.Identities.Any(u => u.IsAuthenticated))
+{
+	<h1>Hello Unregistered User</h1>
+}
+else
+{
+	<h1>
+		Hello @User.Identities.First(
+	  u => u.IsAuthenticated &&
+	  u.HasClaim(c => c.Type == ClaimTypes.Name)).FindFirst(ClaimTypes.Name).Value
+	</h1>
 }
 
 <h2>Index</h2>
