@@ -91,7 +91,7 @@ namespace MvcMovie.Controllers
 		}
 
 		// GET: Movies/Edit/5
-		[Authorize]
+		[Authorize(Policy = "AdminOnly")]
 		public async Task<IActionResult> Edit(int? id)
 		{
 			if (id == null)
@@ -143,7 +143,7 @@ namespace MvcMovie.Controllers
 		}
 
 		// GET: Movies/Delete/5
-		[Authorize]
+		[Authorize(Policy = "AdminOnly")]
 		public async Task<IActionResult> Delete(int? id)
 		{
 			if (id == null)
