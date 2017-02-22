@@ -39,7 +39,7 @@ namespace MvcMovie
 		public IConfigurationRoot Configuration { get; }
 
 		// This method gets called by the runtime. Use this method to add services to the container.
-		public void ConfigureServices(IServiceCollection services)
+		public async void ConfigureServices(IServiceCollection services)
 		{
 
 			services.AddAuthorization(options =>
@@ -152,8 +152,7 @@ namespace MvcMovie
 		{
 			var RoleManager = serviceProvider.GetRequiredService<RoleManager<IdentityRole>>();
 			string[] roleNames = { "Administrator", "Customer" };
-			IdentityResult roleResult;
-
+			
 			foreach (var roleName in roleNames)
 			{
 				//If we already have this role, else
@@ -161,9 +160,25 @@ namespace MvcMovie
 				if (!roleExist)
 				{
 					//create the roles and seed them to the database.
-					roleResult = await RoleManager.CreateAsync(new IdentityRole(roleName));
+					var roleResult = await RoleManager.CreateAsync(new IdentityRole(roleName));
 				}
 			}
+
+
+			//Create Admin, if does not already exist
+			var userManager = serviceProvider.GetService<UserManager<ApplicationUser>>();
+			
+			var _user = await userManager.FindByEmailAsync("admin@admin.com");
+			if(_user == null)
+			{
+				var user = new ApplicationUser { UserName = "admin@admin.com", Email = "admin@admin.com"};
+				var result = await userManager.CreateAsync(user, "eyes4ANeye");
+				var userResult = await userManager.AddToRoleAsync(user, "Administrator");
+			}
+
+
+			
+
 		}
 	}
 }
