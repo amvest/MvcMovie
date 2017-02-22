@@ -128,6 +128,7 @@ namespace MvcMovie.Controllers
 					//var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: HttpContext.Request.Scheme);
 					//await _emailSender.SendEmailAsync(model.Email, "Confirm your account",
 					//    $"Please confirm your account by clicking this link: <a href='{callbackUrl}'>link</a>");
+					var userResult = await _userManager.AddToRoleAsync(user, "Customer");
 					await _signInManager.SignInAsync(user, isPersistent: false);
 					_logger.LogInformation(3, "User created a new account with password.");
 					return RedirectToLocal(returnUrl);
