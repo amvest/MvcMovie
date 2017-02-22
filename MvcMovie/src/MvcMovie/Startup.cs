@@ -13,6 +13,7 @@ using MvcMovie.Data;
 using MvcMovie.Models;
 using MvcMovie.Services;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Identity;
 
 namespace MvcMovie
 {
@@ -40,6 +41,12 @@ namespace MvcMovie
 		// This method gets called by the runtime. Use this method to add services to the container.
 		public void ConfigureServices(IServiceCollection services)
 		{
+
+			services.AddAuthorization(options =>
+			{
+				options.AddPolicy("AdminOnly", policy => policy.RequireRole("Administrator"));
+			});
+
 			// Add framework services.
 			services.AddDbContext<ApplicationDbContext>(options =>
 				options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
@@ -47,6 +54,7 @@ namespace MvcMovie
 			// Configure Identity
 			services.Configure<IdentityOptions>(options =>
 			{
+
 				// Password settings
 				options.Password.RequireDigit = true;
 				options.Password.RequiredLength = 8;
@@ -62,6 +70,10 @@ namespace MvcMovie
 				options.Cookies.ApplicationCookie.ExpireTimeSpan = TimeSpan.FromDays(150);
 				options.Cookies.ApplicationCookie.LoginPath = "/Account/LogIn";
 				options.Cookies.ApplicationCookie.LogoutPath = "/Account/LogOff";
+				options.Cookies.ApplicationCookie.AccessDeniedPath = "/Account/Forbidden/";
+				options.Cookies.ApplicationCookie.AutomaticAuthenticate = true;
+				options.Cookies.ApplicationCookie.AutomaticChallenge = true;
+				options.Cookies.ApplicationCookie.AuthenticationScheme = "Cookie";
 
 				// User settings
 				options.User.RequireUniqueEmail = true;
@@ -77,12 +89,7 @@ namespace MvcMovie
 				options.Filters.Add(new RequireHttpsAttribute());
 			});
 
-			services.AddAuthorization(options =>
-			{
-				options.AddPolicy(
-					"AdminOnly",
-					policyBuilder => policyBuilder.RequireClaim("Name"));
-			});
+			
 
 			// Add application services.
 			services.AddTransient<IEmailSender, AuthMessageSender>();
@@ -92,7 +99,7 @@ namespace MvcMovie
 		}
 
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-		public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
+		public async void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
 		{
 			loggerFactory.AddConsole(Configuration.GetSection("Logging"));
 			loggerFactory.AddDebug();
@@ -135,8 +142,28 @@ namespace MvcMovie
 			});
 
 			SeedData.Initialize(app.ApplicationServices);
+			var serviceProvider = app.ApplicationServices.GetService<IServiceProvider>(); CreateRoles(serviceProvider).Wait();
 
-			
+
+		}
+
+
+		private async Task CreateRoles(IServiceProvider serviceProvider)
+		{
+			var RoleManager = serviceProvider.GetRequiredService<RoleManager<IdentityRole>>();
+			string[] roleNames = { "Administrator", "Customer" };
+			IdentityResult roleResult;
+
+			foreach (var roleName in roleNames)
+			{
+				//If we already have this role, else
+				var roleExist = await RoleManager.RoleExistsAsync(roleName);
+				if (!roleExist)
+				{
+					//create the roles and seed them to the database.
+					roleResult = await RoleManager.CreateAsync(new IdentityRole(roleName));
+				}
+			}
 		}
 	}
 }
